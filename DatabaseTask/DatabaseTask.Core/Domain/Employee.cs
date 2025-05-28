@@ -39,7 +39,7 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         [Column("Child_ID")]
-        public int ChildId { get; set; }  
+        public int ChildId { get; set; }  // PK
 
         [Column("FirstName")]
         public string FirstName { get; set; }
@@ -52,8 +52,15 @@ namespace DatabaseTask.Core.Domain
     }
     public class JobTitle
     {
+        [Key]
+        [Column("JobTitle_ID")]
+        public int JobTitleId { get; set; }  // PK 
+
+        [Column("Name")]
         public string Name { get; set; }
-        public string description { get; set; }
+
+        [Column("Description")]
+        public string Description { get; set; }
     }
 }
 
